@@ -21,7 +21,10 @@ const sql = require("mssql");
 async function createTable() {
   try {
     await sql.connect(connString);
+    console.log("Conectou!")
   } catch (error) {
-    console.log(error);
+    console.log("Mensagem de erro: ", error);
   }
 }
+
+createTable()
